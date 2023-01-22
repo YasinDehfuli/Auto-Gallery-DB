@@ -35,6 +35,7 @@ $r = $dbh->query('SELECT * FROM autogallery ORDER BY `id` ASC ;')
         <th>MODEL</th>
         <th>COLOR</th>
         <th>YEAR</th>
+        <th style="width: 140px ">#</th>
     </tr>
     <?php foreach ($gallery as $cars): ?>
     <tr class="bg-light">
@@ -54,6 +55,10 @@ $r = $dbh->query('SELECT * FROM autogallery ORDER BY `id` ASC ;')
         <td>
                 <?php echo $cars['date'] ?>
         </td>
+        <td class="bg-light bg-gradient bg-dark rounded-3">
+            <button class="bg-primary  rounded-pill">Edit</button>
+            <button class="bg-danger border-5 rounded-3">X</button>
+        </td>
         <?php endforeach; ?>
     </tr>
 </table>
@@ -67,7 +72,7 @@ $r = $dbh->query('SELECT * FROM autogallery ORDER BY `id` ASC ;')
                 <label for="brand">
                     Brand
                 </label>
-                <input type="text" id="brand" name="name" value="" class="form-control">
+                <input type="text" id="brand" name="brand" value="" class="form-control">
             </div>
         </div>
         <div class="col-md">
@@ -93,7 +98,7 @@ $r = $dbh->query('SELECT * FROM autogallery ORDER BY `id` ASC ;')
                 <label for="year">
                     Year
                 </label>
-                <input type="number" id="year" name="email" value="" placeholder="Year" class="form-control">
+                <input type="number" id="year" name="date" value="" placeholder="Year" class="form-control">
             </div>
         </div>
     </div>

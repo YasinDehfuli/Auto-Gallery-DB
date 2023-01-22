@@ -1,7 +1,7 @@
 <?php
 
 require 'inc/dbh.php';
-$sql = "INSERT INTO `students` (`brand`, `model`, `color`, `date`) 
+$sql = "INSERT INTO `autogallery` (`brand`, `model`, `color`, `date`) 
                         VALUES (:brand, :model, :color, :date );";
 $stm = $dbh->prepare($sql);
 $stm->execute($_REQUEST);
